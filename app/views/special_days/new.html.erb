@@ -1,0 +1,13 @@
+<ul>
+  <% @special_day.errors.full_messages.each do |error| %>
+    <li>
+      <%= error %>
+    </li>
+  <% end %>
+</ul>
+
+<%= form_for @special_day do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :when %>
+  <%= f.submit "Create!" %>
+<% end %>

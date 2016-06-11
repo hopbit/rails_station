@@ -1,1 +1,9 @@
 <%= @special_day.name %> - <%= @special_day.when.strftime("%d-%m-%Y") %>
+
+<ul>
+  <% @special_day.comments.each do |comment| %>
+    <li>
+      <%= comment.content %>
+    </li>
+  <% end %>
+</ul>
