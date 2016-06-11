@@ -1,0 +1,7 @@
+<ul>
+  <% @special_days.each do |special_day| %>
+    <li>
+      <%= link_to special_day.name, "/special_days/#{special_day.id}" %> - <%= special_day.when.strftime("%d-%m-%Y") %>
+    </li>
+  <% end %>
+</ul>
