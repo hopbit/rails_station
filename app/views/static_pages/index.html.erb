@@ -1,0 +1,14 @@
+<h1>
+  Special days reminder app
+</h1>
+<p>
+  Today is <%= @date %>
+</p>
+
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <%= event %>
+    </li>
+  <% end %>
+</ul>
