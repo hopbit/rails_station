@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  get 'homepage/index'
-
+  get '/' => 'homepage#index'
 end
