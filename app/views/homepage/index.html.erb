@@ -4,3 +4,9 @@
 -->
 <h1>Special days reminder app</h1>
 <p>Today is <%= @curr_date %></p>
+<p>Possible events:</p>
+<ul>
+  <% @events.each do |e| %>
+    <li><%= e %></li>
+  <% end %>
+</ul>
