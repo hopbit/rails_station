@@ -25,6 +25,6 @@ describe "Routes, controllers and views", type: :feature do
 
   it "displays possible events in the homepage (pass array from the controller and use a loop)" do
     visit "/"
-    expect(page).to have_content("birthday nameday Mother's Day")
+    expect(page).to have_content("birthday name day Mother's Day")
   end
 end
