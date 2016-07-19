@@ -1,6 +1,7 @@
 <h1>All Special Days:</h1>
 <ul>
   <% @events.each do |e| %>
-    <li><%= e %></li>
+    <li><%= link_to "#{e.to_s}", "#{special_days_path()}/#{e.id}" %></li>
+    <!-- DEBUG: <%= e.inspect %>-->
   <% end %>
 </ul>
