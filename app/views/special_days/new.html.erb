@@ -1,0 +1,6 @@
+<h1>New Special Day Form</h1>
+<%= form_for @special_day do |f| %>
+  <p>Name: <%= f.text_field :name %></p>
+  <p>When: <%= f.text_field :when %></p>
+  <%= f.submit "Create!" %>
+<% end %>

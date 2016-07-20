@@ -8,4 +8,8 @@ class SpecialDaysController < ApplicationController
     @special_day = SpecialDay.find(params[:id])
   end
 
+  def new
+    @special_day = SpecialDay.new
+  end
+
 end

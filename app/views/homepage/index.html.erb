@@ -4,9 +4,14 @@
 -->
 <h1>Special days reminder app</h1>
 <p>Today is <%= @curr_date %></p>
-<p>Possible events:</p>
+<p>Example of possible events:</p>
 <ul>
   <% @events.each do |e| %>
     <li><%= e %></li>
   <% end %>
+</ul>
+Menu:<br/>
+<ul>
+  <li><%= link_to "List of all special days", special_days_path %></li>
+  <li><%= link_to "New special day", new_special_day_path %></li>
 </ul>
