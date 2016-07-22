@@ -14,11 +14,12 @@ class SpecialDaysController < ApplicationController
 
   def create
     special_day_hash = params[:special_day]
-    puts "--> special_day_hash: #{special_day_hash}" # debug
-    if special_day_hash[:name] != nil && special_day_hash[:when] != nil
-      when_date = DateTime.parse(special_day_hash[:when])
-      puts "> when_date: #{when_date}"
-      SpecialDay.create!(name: special_day_hash[:name], when: when_date)
+    name_str = special_day_hash[:name]
+    when_date = special_day_hash[:when] 
+    if SpecialDay.create!(name: name_str, when: when_date)
+      redirect_to special_days_path
+    else
+      render :new
     end
   end
 end
