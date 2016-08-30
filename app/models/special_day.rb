@@ -1,6 +1,6 @@
 class SpecialDay < ActiveRecord::Base
-  validates_presence_of :name
-  validates_presence_of :when
+  validates_presence_of :name, :when
+  has_many :comments
   def to_s
     when_str = self.when ? self.when.strftime('%d-%m-%Y') : ''
     return "#{self.name} - #{when_str}"
